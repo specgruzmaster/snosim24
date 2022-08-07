@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>snosim24.ru </title>
+    <link rel="stylesheet" href="css/style.min.css?_v=20220807174756">
+        <!-- fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Inter:300,400,600,700,800,900&_v=20220807174756' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!-- popup -->
+    <div id="popup">
+    <div class="popup__container">
+        <span id="popup__close"></span>
+        <picture><source srcset="img/helmet.webp" type="image/webp"><img src="img/helmet.png" alt="каска.png" class="popup__image"></picture>
+        <div class="popup__title">Заказать звонок</div>
+        <div class="popup__description">
+            Заполните форму и мы перезвоним вам в ближайшее время
+        </div>
+        <form>
+            <input type="hidden" name="project_name" value="demontajprofi.ru">
+			<input type="hidden" name="admin_email" value="nikolausinisa@gmail.com">
+			<input type="hidden" name="form_subject" value="Заказан звонок с сайта!">
+
+            <div class="form__row">
+                <div class="form__group">
+                    <input type="text" class="form__input" name="Имя" placeholder=" ">
+                    <span class="form__icon form__icon-user"></span>
+                    <label class="form__label">Ваше имя</label>
+                </div>
+                <div class="form__group">
+                    <input type="text" class="form__input" name="Телефон" placeholder=" " required
+                    oninvalid="setCustomValidity('Заполните обязательное поле!')" oninput="setCustomValidity('')">
+                    <span class="form__icon form__icon-phone"></span>
+                    <label class="form__label">Ваш номер телефона*</label>
+                </div>
+                <div class="form__group">
+                    <input id="checkbox" type="checkbox" class="form__checkbox" checked required
+					oninvalid="setCustomValidity('Вы должны согласиться с политикой конфеденциальности!')"
+					oninput="setCustomValidity('')">
+                    <label for="checkbox" class="form__label-checkbox">Я ознакомлен с <a href="politica">Политикой конфеденциальности</a></label>
+                </div>
+            </div>
+            <input type="submit" class="popup__button button-type-1" value="ЗАКАЗАТЬ ЗВОНОК">
+        </form>
+    </div>
+    <span id="popup__close-bg"></span>
+</div>
+
+<!-- wrapper -->
+    <div class="wrapper">
+        <!-- header -->
+        <header class="header">
+    <nav class="navbar">
+        <a href="https://snosim24.ru" class="navbar__logo">
+            <!-- logo svg -->
+            SNOSIM<span>24</span>.ru
+        </a>
+        <div class="navbar__info">
+            <span class="info__icon info__icon-location"></span>
+            <div class="info__content">
+                <div class="info__subtext">Где мы работаем:</div>
+                <div class="info__text">Мы работаем в Москве<br>и  радиусе 700км.</div>
+            </div>
+        </div>
+        <div class="navbar__info">
+            <span class="info__icon info__icon-telephone"></span>
+            <div class="info__content">
+                <div class="info__subtext">Звоните по номеру:</div>
+                <a href="tel:+74950889898">+7 (495) 088-98-98</a>
+            </div>
+        </div>
+        <div class="button-type-1 navbar__button popup">
+            <span>ОБРАТНЫЙ ЗВОНОК</span>
+            <span class="button-icon-phone btn-icon-animation"></span>
+        </div>
+        <div class="navbar__menu">
+            <div class="menu__button" id="burger">
+                <span class="arrow"></span>
+            </div>
+                <ul class="nav" id="menu">
+                    <li>
+                        <a href="#home" class="nav__link">
+                            <span>Главная</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#work" class="nav__link">
+                            <span>Услуги</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#stages" class="nav__link">
+                            <span>Этапы работы</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#advantages" class="nav__link">
+                            <span>Преимущества</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#question" class="nav__link">
+                            <span>Вопрос ответ</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#comment" class="nav__link">
+                            <span>Отзывы</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about" class="nav__link">
+                            <span>О нас</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="nav__link">
+                            <span>Контакты</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#order" class="nav__link">
+                            <span>Оставить заявку</span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </nav>
+</header>
+        <!-- banner -->
+        <section class="banner" id="home">
+    <div class="container">
+        <div class="banner__content">
+            <div class="banner__text">
+                <h1 class="banner__h1">
+                    <div class="banner__subtitle">ВЫЕЗД СПЕЦИАЛИСТА НА ЗАМЕР СОВЕРШЕННО <span>БЕСЛПТАНО!</span></div>
+                    <div class="banner__title"><span>Д</span>ЕМОНТАЖ</div>
+                    <div>ЗДАНИЙ И СООРУЖЕНИЙ ЗА 24 ЧАСА</div>
+                </h1>
+            </div>
+            <div class="banner__social">
+                <div class="banner__social-row banner__social-whatsapp"></div>
+                <div class="banner__social-row banner__social-telegram"></div>
+            </div>
+        </div>
+        <div class="banner__button button-type-1 popup">
+СВЯЗАТЬСЯ СО СПЕЦИАЛИСТОМ
+        </div>
+        <div class="banner__advantage">
+            <div class="banner__advantage-item">
+                <img src="img/banner/excavator.svg" alt="" class="banner__advantage-icon">
+                <div class="banner__advantage-text"><span>Низкие цены</span><br>за счет собственной техники</div>
+            </div>
+            <div class="banner__advantage-item">
+                <img src="img/banner/check.svg" alt="" class="banner__advantage-icon">
+                <div class="banner__advantage-text"><span>Уборка и вывозм мусора</span><br>включены в стоимость</div>
+            </div>
+            <div class="banner__advantage-item">
+                <img src="img/banner/watch.svg" alt="" class="banner__advantage-icon">
+                <div class="banner__advantage-text"><span>Выполняем работу в срок</span><br>не допускаем задержек</div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- main -->
+        <main class="main">
+            <!-- WORK -->
+            <section class="work" id="work">
+    <div class="container">
+        <div class="work__title">
+            Что мы можем
+        </div>
+        <div class="work__description">
+            Работаем без посредников, выезжаем сразу же
+        </div>
+        <div class="work__list">
+            <div class="work__item">
+                <picture><source srcset="img/work/1.webp" type="image/webp"><img src="img/work/1.png" alt="" class="work__image"></picture>
+                <div class="work__content">
+                    <div class="work__name">Демонтаж фундамента</div>
+                    <p class="work__text" align="justify">
+                        Демонтаж не прочного фундамента 
+                        делается ручным способом.  В противном  случае мы используем   трактор и самосвал.
+                    </p>
+                    <div class="work__price">От 10 000 ₽</div>
+                    <div class="work__button button-type-2 popup">
+                        <span>
+                            ЗАКАЗАТЬ
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="work__item">
+                <picture><source srcset="img/work/1.webp" type="image/webp"><img src="img/work/1.png" alt="" class="work__image"></picture>
+                <div class="work__content">
+                    <div class="work__name">Демонтаж фундамента</div>
+                    <p class="work__text" align="justify">
+                        Демонтаж не прочного фундамента 
+                        делается ручным способом.  В противном  случае мы используем   трактор и самосвал.
+                    </p>
+                    <div class="work__price">От 10 000 ₽</div>
+                    <div class="work__button button-type-2 popup">
+                        <span>
+                            ЗАКАЗАТЬ
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="work__item">
+                <picture><source srcset="img/work/1.webp" type="image/webp"><img src="img/work/1.png" alt="" class="work__image"></picture>
+                <div class="work__content">
+                    <div class="work__name">Демонтаж фундамента</div>
+                    <p class="work__text" align="justify">
+                        Демонтаж не прочного фундамента 
+                        делается ручным способом.  В противном  случае мы используем   трактор и самосвал.
+                    </p>
+                    <div class="work__price">От 10 000 ₽</div>
+                    <div class="work__button button-type-2 popup">
+                        <span>
+                            ЗАКАЗАТЬ
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="work__item">
+                <picture><source srcset="img/work/1.webp" type="image/webp"><img src="img/work/1.png" alt="" class="work__image"></picture>
+                <div class="work__content">
+                    <div class="work__name">Демонтаж фундамента</div>
+                    <p class="work__text" align="justify">
+                        Демонтаж не прочного фундамента 
+                        делается ручным способом.  В противном  случае мы используем   трактор и самосвал.
+                    </p>
+                    <div class="work__price">От 10 000 ₽</div>
+                    <div class="work__button button-type-2 popup">
+                        <span>
+                            ЗАКАЗАТЬ
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="work__list" id="more">
+            <div class="work__item">
+                <picture><source srcset="img/work/1.webp" type="image/webp"><img src="img/work/1.png" alt="" class="work__image"></picture>
+                <div class="work__content">
+                    <div class="work__name">Демонтаж фундамента</div>
+                    <p class="work__text" align="justify">
+                        Демонтаж не прочного фундамента 
+                        делается ручным способом.  В противном  случае мы используем   трактор и самосвал.
+                    </p>
+                    <div class="work__price">От 10 000 ₽</div>
+                    <div class="work__button button-type-2 popup">
+                        <span>
+                            ЗАКАЗАТЬ
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="work__item">
+                <picture><source srcset="img/work/1.webp" type="image/webp"><img src="img/work/1.png" alt="" class="work__image"></picture>
+                <div class="work__content">
+                    <div class="work__name">Демонтаж фундамента</div>
+                    <p class="work__text" align="justify">
+                        Демонтаж не прочного фундамента 
+                        делается ручным способом.  В противном  случае мы используем   трактор и самосвал.
+                    </p>
+                    <div class="work__price">От 10 000 ₽</div>
+                    <div class="work__button button-type-2 popup">
+                        <span>
+                            ЗАКАЗАТЬ
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="work__item">
+                <picture><source srcset="img/work/1.webp" type="image/webp"><img src="img/work/1.png" alt="" class="work__image"></picture>
+                <div class="work__content">
+                    <div class="work__name">Демонтаж фундамента</div>
+                    <p class="work__text" align="justify">
+                        Демонтаж не прочного фундамента 
+                        делается ручным способом.  В противном  случае мы используем   трактор и самосвал.
+                    </p>
+                    <div class="work__price">От 10 000 ₽</div>
+                    <div class="work__button button-type-2 popup">
+                        <span>
+                            ЗАКАЗАТЬ
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="work__item">
+                <picture><source srcset="img/work/1.webp" type="image/webp"><img src="img/work/1.png" alt="" class="work__image"></picture>
+                <div class="work__content">
+                    <div class="work__name">Демонтаж фундамента</div>
+                    <p class="work__text" align="justify">
+                        Демонтаж не прочного фундамента 
+                        делается ручным способом.  В противном  случае мы используем   трактор и самосвал.
+                    </p>
+                    <div class="work__price">От 10 000 ₽</div>
+                    <div class="work__button button-type-2 popup">
+                        <span>
+                            ЗАКАЗАТЬ
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="work__show-more" id="showWork">
+            <span id="workText">Показать все возможные услуги</span>
+        </div>
+    </div>
+</section>
+            <!-- HOW -->
+            <section class="how" id="stages">
+    <div class="container">
+        <div class="how__title">
+            Как строится работа
+        </div>
+        <div class="how__description">
+            Получение разрешительной документации и разрешений. Оценка и страхование транспортных рисков.
+        </div>
+        <div class="how__list">
+            <div class="how__item">
+                <img src="img/how/computer.svg" alt="">
+                <div class="how__head">
+                    <span class="how__number">01</span>
+                    <div class="how__heading" style="margin-left: 20px;">
+                        Вы оставляете заявку на<br>сайте
+                    </div>
+                </div>
+                <div class="how__text">
+                    Или звоните нам по номеру<br>+7 (495) 088-98-98
+                </div>
+            </div>
+            <div class="how__item">
+                <img src="img/how/peopel.svg" alt="">
+                <div class="how__head">
+                    <span class="how__number">02</span>
+                    <div class="how__heading" style="margin-left: 20px;">
+                        Производим расчет
+                    </div>
+                </div>
+                <div class="how__text">
+                    Назначаем консультацию на удобное для Вас время
+                </div>
+            </div>
+            <div class="how__item">
+                <img src="img/how/wallet.svg" alt="">
+                <div class="how__head">
+                    <span class="how__number">03</span>
+                    <div class="how__heading" style="margin-left: 20px;">
+                        Оплата услуги
+                    </div>
+                </div>
+                <div class="how__text">
+                    При согласии с предложенными условиями клиент подписывает договор и производит оплату удобным способом
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <!-- ADVANTAGES -->
+            <section class="advantages" id="advantages">
+    <div class="container">
+        <div class="advantages__row">
+            <div class="advantages__list">
+                <div class="advantages__item">
+                    <p>Высокое качество оборудования</p>
+                </div>
+                <div class="advantages__item">
+                    <p>Доводим до результата</p>
+                </div>
+                <div class="advantages__item">
+                    <p>Остаемся на связи</p>
+                </div>
+                <div class="advantages__item">
+                    <p>Профессионалы своего дела</p>
+                </div>
+            </div>
+            <div class="advantages__image">
+                <picture><source srcset="img/advantages.webp" type="image/webp"><img src="img/advantages.png" alt="advantages.png"></picture>
+            </div>
+        </div>
+    </div>
+</section>
+            <!-- QUESTION -->
+            <section class="question" id="question">
+    <div class="container">
+        <div class="question__title">
+            Вопросы и ответы
+        </div>
+        <div class="question__description">
+            Мы собрали в одной команде постоянно действующих специалистов, качество наших товаров отвечает всем требованиям стандартов
+        </div>
+        <div class="question__list">
+            <div class="question__wrapper">
+                <div data-spollers data-one-spoller class="question__block _init">
+                    <div class="block__item">
+						<button tabindex="-1" type="button" data-spoller class="block__title">
+                            <span class="question__icon"></span>
+							Сколько стоит демонтаж дома и какие факторы влияют на цену?
+						</button>
+						<div class="block__text">
+							<p>
+								Стоимость сноса дома начинается от 20 тыс. руб. и зависит от целого перечня факторов: материалы, из которых состоит здание, площадь объекта в квадратных метрах и количество этажей, необходимость демонтажа фундамента, число требуемых для утилизации мусора контейнеров.
+							</p>
+						</div>
+					</div>
+                    <div class="block__item">
+						<button tabindex="-1" type="button" data-spoller class="block__title">
+							<span class="question__icon"></span>
+							Учитывается ли при расчете цены удаленность дома от Москвы?
+						</button>
+						<div class="block__text">
+							<p>
+								Нет, расстояние от Москвы до места проведения сноса дома не учитывается при расчете стоимости работ.
+							</p>
+						</div>
+					</div>
+                    <div class="block__item">
+						<button tabindex="-1" type="button" data-spoller class="block__title">
+							<span class="question__icon"></span>
+							Какой набор инструментов, спецтехники вы применяете при проведении демонтажа дома?
+						</button>
+						<div class="block__text">
+							<p>
+								Если требуется выполнить демонтаж дома вручную, то в ход идут бензиновые и электрические инструменты. В особых ситуациях мы применяем спецтехнику: экскаваторы, погрузчики, гидромолоты и самосвалы..
+							</p>
+						</div>
+					</div>  
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+            <!-- COMMENT -->
+            <section class="comment" id="comment">
+    <div class="container">
+        <div class="comment__title">
+            Отзывы наших клиентов
+        </div>
+        <div class="comment__description">
+            НАМ ВАЖНО СЛЫШАТЬ ВАШЕ МНЕНИЕ
+        </div>
+        <div class="comment__list">
+            <div class="comment__item">
+                <div class="comment__content">
+                    <div class="comment__name">Олег Николаевич</div>
+                    <div class="comment__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat cumque eaque praesentium obcaecati optio, iste suscipit, nostrum ad aspernatur qui pariatur corporis, ex dolor earum veritatis ducimus. Aut, illum! Id.</div>
+                </div>
+                <div class="comment__autor">
+                    <picture><source srcset="img/comment/autor.webp" type="image/webp"><img src="img/comment/autor.webp" alt="клиент.png"></picture>
+                    <div class="comment__company">Бухгалтер</div>
+                </div>
+            </div>
+            <div class="comment__item">
+                <div class="comment__content">
+                    <div class="comment__name">Олег Николаевич</div>
+                    <div class="comment__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugiat cumque eaque praesentium obcaecati optio, iste suscipit, nostrum ad aspernatur qui pariatur corporis, ex dolor earum veritatis ducimus. Aut, illum! Id.</div>
+                </div>
+                <div class="comment__autor">
+                    <picture><source srcset="img/comment/autor.webp" type="image/webp"><img src="img/comment/autor.webp" alt="клиент.png"></picture>
+                    <div class="comment__company">Бухгалтер</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        </main>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+    <div class="container">
+        <div class="footer__list">
+            <div class="footer__item" id="about">
+                <div class="footer__title">О нас</div>
+                <div class="footer__description" style="line-height: 150%;">
+                    РАБОТАЕМ БОЛЕЕ 3-х ЛЕТ<br>Наша цель – обеспечить каждому клиенту комфортное и безопасное проживание в доме, наполненном чистым, свежим воздухом, уютом и теплом.
+                </div>
+            </div>
+            <div class="footer__item" id="contact">
+                <div class="footer__title">Контакты</div>
+                <div class="footer__contacts">
+                    <span class="footer__contacts-icon footer__icon-location"></span>
+                    <div class="footer__contacts-text">Россия, г. Москва, ул. Фестивальная 34/57.</div>
+                </div>
+                <div class="footer__contacts">
+                    <span class="footer__contacts-icon footer__icon-phone"></span>
+                    <a href="tel:+74950889898">+7 (495) 088-98-98</a>
+                </div>
+                <div class="footer__contacts">
+                    <span class="footer__contacts-icon footer__icon-mail"></span>
+                    <a href="mailto:info@snosim24.ru">info@snosim24.ru</a>
+                </div>
+            </div>
+            <div class="footer__item" id="order">
+                <div class="footer__title">Оформите заявку</div>
+                <div class="footer__description">Наши специалисты свяжутся с вами в течении 15 минут после отправки заявки</div>
+                <form>
+                    <input type="hidden" name="project_name" value="demontajprofi.ru">
+                    <input type="hidden" name="admin_email" value="nikolausinisa@gmail.com">
+                    <input type="hidden" name="form_subject" value="Заказан звонок с сайта!">
+        
+                    <div class="form__row">
+                        <div class="form__group">
+                            <input type="text" class="form__input footer__input" name="Имя" placeholder=" ">
+                            <span class="form__icon form__icon-user"></span>
+                            <label class="form__label">Ваше имя</label>
+                        </div>
+                        <div class="form__group">
+                            <input type="text" class="form__input footer__input" name="Телефон" placeholder=" " required
+                            oninvalid="setCustomValidity('Заполните обязательное поле!')" oninput="setCustomValidity('')">
+                            <span class="form__icon form__icon-phone"></span>
+                            <label class="form__label">Ваш номер телефона*</label>
+                        </div>
+                        <div class="form__group">
+                            <input id="checkbox2" type="checkbox" class="form__checkbox" checked required
+                            oninvalid="setCustomValidity('Вы должны согласиться с политикой конфеденциальности!')"
+                            oninput="setCustomValidity('')">
+                            <label for="checkbox2" class="form__label-checkbox footer__politica">Я ознакомлен с <a href="politica">Политикой конфеденциальности</a></label>
+                        </div>
+                    </div>
+                    <input type="submit" class="popup__button button-type-1 footer__button" value="ЗАКАЗАТЬ ЗВОНОК">
+                </form>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <p>
+                Copyright © 2022 Демонтажная кампания SNOSIM24.ru
+            </p>
+            <div>
+                <a href="politica">Политика конфеденциальности</a>
+                <a href="sitemap">Карта сайта</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- main js -->
+    <script src="js/app.min.js?_v=20220807174756"></script>
+</body>
+
+</html>
